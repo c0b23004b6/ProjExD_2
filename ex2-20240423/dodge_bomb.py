@@ -1,8 +1,8 @@
 import os
+import pygame as pg
 import random
 import sys
 import time
-import pygame as pg
 
 
 WIDTH, HEIGHT = 1600, 900
@@ -41,7 +41,8 @@ def bd_kasoku(vx,bb_imgs,tmr): # 爆弾の拡大、加速
     bb_img = bb_imgs[min(tmr//500, 9)]
 
 def bd_tuibi(): # 追跡型爆弾の作成
-
+    #まだ
+    pg
 
 def game_over(screen): #ゲームオーバー画面を表示
     # テキストの設定
