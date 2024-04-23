@@ -30,7 +30,7 @@ def check_bound(obj_rct:pg.Rect):
 
 
 def kk_muki(): # こうかとんの向きをかえる
-
+    pg
 
 def bd_kasoku(vx,bb_imgs,tmr): # 爆弾の拡大、加速
     saccs = [a for a in range(1, 11)]
