@@ -28,18 +28,37 @@ def check_bound(obj_rct:pg.Rect):
         tate = False
     return yoko, tate
 
+
+def kk_muki(): # こうかとんの向きをかえる
+
+
+def bd_kasoku(vx,bb_imgs,tmr): # 爆弾の拡大、加速
+    saccs = [a for a in range(1, 11)]
+    for r in range(1, 11):
+        bb_img = pg.Surface((20*r, 20*r))
+        pg.draw.circle(bb_img, (255, 0, 0), (10*r, 10*r), 10*r)
+    avx = vx*bb_accs[min(tmr//500, 9)]
+    bb_img = bb_imgs[min(tmr//500, 9)]
+
+def bd_tuibi(): # 追跡型爆弾の作成
+
+
 def game_over(screen): #ゲームオーバー画面を表示
+    # テキストの設定
     fonto =  pg.font.Font(None, 80)
     txt = fonto.render("Game Over", True, (255, 255, 255))
-    rct = pg.Surface((WIDTH,HEIGHT))
-    pg.draw.rect(rct,(0,0,0),(0,0,1600,900))
+    # 黒い四角の設定
+    rct = pg.Surface((WIDTH, HEIGHT))
+    pg.draw.rect(rct, (0, 0, 0), (0, 0, 1600, 900))
     rct.set_alpha(150)
+    #　こうかとんの読み込み
     kk_img2 = pg.transform.rotozoom(pg.image.load("fig/8.png"), 0, 2.0)
     kk_img3 = pg.transform.rotozoom(pg.image.load("fig/8.png"), 0, 2.0)
+    #　ゲームオーバー画面の表示
     screen.blit(rct, [0, 0])
     screen.blit(txt, [640, 410])
-    screen.blit(kk_img2, [1000,350])
-    screen.blit(kk_img3, [500,350])
+    screen.blit(kk_img2, [1000, 350])
+    screen.blit(kk_img3, [500, 350])
     pg.display.update()
     time.sleep(5)
 
